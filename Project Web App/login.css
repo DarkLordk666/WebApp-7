@@ -1,0 +1,59 @@
+/* Custom CSS styles */
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+body {
+    background-image: url(https://i.makeagif.com/media/3-03-2016/ndNR4d.gif);
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+    color: rgb(238, 238, 246);
+}
+
+.container {
+    margin-top: 20px;
+    background-color: #616d76;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-color: #031d2f;
+    border: solid #0b99e5 5px;
+}
+
+/* Center the form */
+.form-container {
+    text-align: center;
+}
+
+/* Style the buttons */
+.btn {
+    margin-top: 10px;
+}
+
+/* Style the footer */
+footer {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}
+.column {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #031d2f;
+    border: solid #0b99e5 5px;
+}
+.container-fluid {
+    margin-top: 20px;
+    background-color: #031d2f;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-color: aqua;
+    border: solid #0b99e5 5px;
+}
+.form-control {
+    color: #000204;
+}
