@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>หน้าเข้าสู่ระบบ</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Homepage.html">หน้าหลัก</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>เข้าสู่ระบบ</h1>
+        <form action="Homepage.html">
+            <input type="text" placeholder="ชื่อผู้ใช้" pattern="[a-zA-Z0-9#*]{10}" required title="กรุณากรอก 10 ตัวอักษร ที่ถูกต้อง">
+            <input type="password" placeholder="รหัสผ่าน" pattern="^(?=.*[0-9])(?=.*[#*])[A-Za-z0-9#*]{10}$" required title="กรุณากรอกรหัสผ่าน 10 ตัว ต้องมี #">
+            <button>เข้าสู่ระบบ</button>
+        </form>
+    </section>
+</body>
+</html>
