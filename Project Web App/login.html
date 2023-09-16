@@ -23,14 +23,14 @@
               <div class="row">
               <label class="col-md-4" style="text-align:right"> Username </label>
                 <div class="col-md-4">
-                <input type="text"  name="Username" class="form-control" required placeholder="Username" />
+                <input type="text" placeholder="ชื่อผู้ใช้" pattern="[a-zA-Z0-9#*]{10}" required title="กรุณากรอก 10 ตัวอักษร ที่ถูกต้อง">
                 </div>
                 </div>
               <div class="row">
               <br>
               <label class="col-md-4" style="text-align:right"> Password </label>
                 <div class="col-md-4">
-                     <input type="password" name="Password" class="form-control" required placeholder="Password" />
+                     <input type="password" placeholder="รหัสผ่าน" pattern="^(?=.*[0-9])(?=.*[#*])[A-Za-z0-9#*]{10}$" required title="กรุณากรอกรหัสผ่าน 10 ตัว ต้องมี #">
               </div>
               </div>
  
