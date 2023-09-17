@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Game Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gameinfo.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html"><h2>We Game Store</h2></a>
+        <a href="storage.html"><h2>Storage</h2></a>
+        <h5>Genre</h5><br>
+        <select id="game_genres">
+            <option value="All">All</option>
+            <option value="Open World">Open World</option>
+            <option value="FPS">FPS</option>
+            <option value="MMORPG">MMORPG</option>
+            <option value="RTS">RTS</option>
+            <option value="Action">Action</option>
+            <option value="Simulation">Simulation</option>
+            <option value="Visual Novel">Visual Novel</option>
+            <option value="Sandbox">Sandbox</option>
+            <option value="MOBA">MOBA</option>
+            <option value="Indie">Indie</option>
+        </select>
+       <article class="topnav">
+        <form id="form" role="search">
+            <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+            <button><svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg></button>
+        </form>
+        <a href="login.html"><h2>login</h2></a>
+        <a href="register.html"><h2>register</h2></a>
+        <a href="aboutus.html"><h2>About Us</h2></a>
+       </article>  
+    </nav>
+    <section class="game-details">
+        <article class="game_name">
+           <h2>Minecraft</h2>
+        </article>
+        <div class="column-game">
+        <section class="gamepic">
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png" alt="Minecraft Picture">
+        </section>
+        </div>
+        <section class="game-description">
+            <h2>About Minecraft</h2>
+            <h4>Minecraft is a sandbox video game developed by Mojang Studios. In the game, players can build and explore virtual worlds made up of blocks and materials.</h4>
+        </section>
+        <section class="game-rating">
+            <h2>Rate this game:</h2>
+            <div class="thumbs-up" id="thumbs-up"></div>
+            <div class="thumbs-down" id="thumbs-down"></div>
+        </section>
+    </section>
+    <script src="script.js"></script>
+    <footer><h1>Web App Group 7</h1></footer>
+</body>
+</html>
