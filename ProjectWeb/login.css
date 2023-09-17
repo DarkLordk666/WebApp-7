@@ -17,7 +17,7 @@ body {
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border-color: aqua;
+    border-color: #031d2f;
     border: solid #0b99e5 5px;
 }
 
@@ -47,7 +47,7 @@ footer {
 }
 .container-fluid {
     margin-top: 20px;
-    background-color: #0d7cd1;
+    background-color: #031d2f;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -57,9 +57,3 @@ footer {
 .form-control {
     color: #000204;
 }
-
-/* Add spacing to the navigation links */
-.nav-link {
-    margin-right: 20px; /* Adjust the margin to your desired spacing */
-}
-

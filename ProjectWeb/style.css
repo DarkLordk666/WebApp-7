@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 *{
     margin: 20;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
 }
 body{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: #4a54e7;
+    background-color: #4e4f5b;
+    border-bottom: 1px solid rgb(11, 226, 215);
 }
 nav{
     width: 100%;
@@ -17,14 +20,20 @@ nav{
     align-items: center;
     justify-content: flex-start;
     border-bottom: 1px solid rgb(11, 226, 215);
+    background-color: rgb(29, 72, 225) !important;
 }
+
 nav h2{
     margin: 0 20px;
     color:#faf3f3;
 }
+
 nav a{
     text-decoration: none;
+    align-items: right;
+    justify-content: flex-start;
 }
+
 select{
     padding: 5px;
     outline: none;
@@ -49,22 +58,123 @@ img{
     flex-wrap: wrap;
     justify-content: center;
 }
+h5 {
+    color: #faf3f3;
+}
 h2{
     color:#fff;
     text-align: center;
     font-size: 1.3em;
 }
+h1{
+    color:#fff;
+    text-align: center;
+    font-size: 1.9em;
+}
 .movie:hover{
     opacity: 90%;
     transform: scale(0.98);
 }
+.topnav {
+    overflow: hidden;
+    float: right;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* จัดเรียงไปทางด้านขวา */
+    flex-grow: 1;
+}
+  
+  /* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 10px;
+}
+  
+  /* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: rgb(24, 36, 207);
+}
+  
+  /* Style the "active" element to highlight the current page */
+.topnav a.active {
+    background-color: #2196F3;
+    color: rgb(242, 240, 240);
+}
+  
+  /* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+    padding: 6px;
+    border: none;
+    margin-left: 16px; /* เลื่อน search box ไปทางด้านซ้ายของ login และ register */
+    font-size: 17px;
+    border-radius: 5px;
+}
+.topnav::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.column {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #1785a1;
+    border: solid #053d41 2px;
+}
+.dummy_text {
+     color: #faf3f3;
+}
+.container {
+    padding: 10px;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly 
+}
+@media screen and (min-width: 768px) {
+    nav {
+        width: 100%;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgb(11, 226, 215);
+        background-color: rgb(29, 72, 225) !important;
+    }
+    .column {
+        padding: 20px;
+        margin: 30px;
+        border-radius: 20px;
+        background-color: #1785a1;
+        border: solid #053d41 2px;
+        width: 310px;
+        align-items: center;
+    }
+    .container{
+        flex-direction: row;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        background-color: #4e4f5b;
+    }   
+}
 
-/* style.css */
+/* เลือกคลาส image-box ซึ่งใช้ในรายการเกมส์ */
 .image-box {
-    width: 200px; /* กำหนดความกว้างของกล่อง */
-    height: 200px; /* กำหนดความสูงของกล่อง */
-    border: 1px solid #ccc; /* กำหนดเส้นขอบสำหรับกล่อง */
-    overflow: hidden; /* กำหนดให้เนื้อหาในกล่องที่เกินขนาดจะถูกซ่อนไว้ */
+    width: 100px; /* ปรับขนาดความกว้างของกล่องรูปภาพตามที่คุณต้องการ */
+    height: auto; /* ทำให้ความสูงปรับแต่งอัตโนมัติตามอัตราส่วนของรูปภาพ */
+    display: inline-block; /* จัดเรียงรูปภาพในแนวนอน */
+    margin-right: 10px; /* ระยะห่างระหว่างรูปภาพแต่ละรายการ */
 }
 
 .image-box img {
@@ -72,3 +182,5 @@ h2{
     height: 100%; /* กำหนดให้รูปภาพขนาดเต็มกับกล่อง */
     object-fit: cover; /* กำหนดให้รูปภาพครอบคลุมพื้นที่ในกล่อง */
 }
+
+
