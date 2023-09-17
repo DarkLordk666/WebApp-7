@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 *{
     margin: 20;
     padding: 0;
@@ -22,18 +22,15 @@ nav{
     border-bottom: 1px solid rgb(11, 226, 215);
     background-color: rgb(29, 72, 225) !important;
 }
-
 nav h2{
     margin: 0 20px;
     color:#faf3f3;
 }
-
 nav a{
     text-decoration: none;
     align-items: right;
     justify-content: flex-start;
 }
-
 select{
     padding: 5px;
     outline: none;
@@ -182,5 +179,3 @@ h1{
     height: 100%; /* กำหนดให้รูปภาพขนาดเต็มกับกล่อง */
     object-fit: cover; /* กำหนดให้รูปภาพครอบคลุมพื้นที่ในกล่อง */
 }
- */
-
