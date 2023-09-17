@@ -19,11 +19,11 @@
         <form id="search-form">
             <input type="text" list="game-list" id="search-input" placeholder="คำค้นหา">
             <datalist id="game-list">
-                <option value="Grand Theft Auto V">
-                <option value="เกมส์ A: รายละเอียดของเกมส์ B">
-                <option value="เกมส์ A: รายละเอียดของเกมส์ C">
+                <option value="Grand Theft Auto V" data-img="Capture.png">
+                <option value="Counter-Strike: Global Offensive" data-img="Capture2.png">
+                <option value="Generation Zero®" data-img="Capture3.png">
                 <!-- เพิ่มรายการเกมส์ตามที่คุณต้องการ -->
-            </datalist>
+            </datalist>            
             <button type="button" id="search-button">ค้นหา</button>
         </form>
 
@@ -31,6 +31,7 @@
             <!-- แสดงผลลัพธ์การค้นหาที่สร้างจำลอง -->
         </ul>
     </section>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -65,7 +66,10 @@
                         const imageBox = document.createElement("div");
                         imageBox.classList.add("image-box");
                         const gameImage = document.createElement("img");
-                        gameImage.src = "Capture.png";
+            
+                        // ใช้ dataset property เพื่อเข้าถึง URL ของรูปภาพที่เกี่ยวข้องกับเกมส์
+                        gameImage.src = game.dataset.img;
+            
                         gameImage.alt = "รูปภาพเกมส์";
                         const gameTitle = document.createElement("strong");
                         gameTitle.textContent = game.value;
@@ -88,7 +92,10 @@
                             const imageBox = document.createElement("div");
                             imageBox.classList.add("image-box");
                             const gameImage = document.createElement("img");
-                            gameImage.src = "Capture.png";
+
+                            // ใช้ dataset property เพื่อเข้าถึง URL ของรูปภาพที่เกี่ยวข้องกับเกมส์
+                            gameImage.src = game.dataset.img;
+
                             gameImage.alt = "รูปภาพเกมส์";
                             const gameTitle = document.createElement("strong");
                             gameTitle.textContent = game.value;
@@ -101,8 +108,10 @@
                         }
                     }
                 }
-            }
+            }        
         });
     </script>
+
+
 </body>
 </html>
