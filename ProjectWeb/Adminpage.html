@@ -8,19 +8,34 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">หน้าหลัก</a></li>
+                <li><a href="Homepage.html">หน้าหลัก</a></li>
             </ul>
         </nav>
     </header>
     <section>
         <h1>จัดการข้อมูล</h1>
         <h2>สินค้า</h2>
-        <form>
+        <form id="product-form">
             <!-- แบบฟอร์มสำหรับเพิ่ม อัปเดต และลบสินค้า -->
+            <label for="product-name">ชื่อสินค้า:</label>
+            <input type="text" id="product-name" name="product-name" required>
+            <label for="product-description">รายละเอียดสินค้า:</label>
+            <textarea id="product-description" name="product-description" required></textarea>
+            <label for="product-price">ราคาสินค้า:</label>
+            <input type="number" id="product-price" name="product-price" required>
+            <button type="submit">เพิ่มสินค้า</button>
         </form>
+        
         <h2>บัญชีผู้ใช้</h2>
-        <form>
+        <form id="user-account-form">
             <!-- แบบฟอร์มสำหรับเพิ่ม อัปเดต และลบบัญชีผู้ใช้ -->
+            <label for="username">ชื่อผู้ใช้:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">รหัสผ่าน:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">เพิ่มบัญชีผู้ใช้</button>
         </form>
     </section>
 </body>
