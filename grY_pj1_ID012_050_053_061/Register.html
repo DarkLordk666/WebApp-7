@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงทะเบียน</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="register.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Homepage.html">หน้าหลัก</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>ลงทะเบียน</h1>
+        <p>กรุณากรอกข้อมูลต่อไปนี้เพื่อลงทะเบียน</p>
+        <form action="Homepage.html" method="POST">
+            <label for="username">ชื่อผู้ใช้:</label>
+            <input type="text" id="username" name="username" pattern="[a-zA-Z0-9#*]{10}" required title="กรุณากรอก 10 ตัวอักษร ที่ถูกต้อง">
+            <br>
+
+            <label for="password">รหัสผ่าน:</label>
+            <input type="password" id="password" name="password" pattern="^(?=.*[0-9])(?=.*[#*])[A-Za-z0-9#*]{10}$" required title="กรุณากรอกรหัสผ่าน 10 ตัว ต้องมี #">
+            <br>
+
+            <label for="confirm-password">ยืนยันรหัสผ่าน:</label>
+            <input type="password" id="confirm-password" name="confirm-password" pattern="^(?=.*[0-9])(?=.*[#*])[A-Za-z0-9#*]{10}$" required title="กรุณากรอกรหัสผ่าน 10 ตัว ต้องมี #">
+            <br>
+
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email" pattern=".+@gmail\.com" required title="กรุณากรอกอีเมลที่ถูกต้องตาม format xxxxx@gmail.com">
+            <br>
+
+            <input type="submit" value="ลงทะเบียน">
+        </form>
+    </section>
+</body>
+</html>
+

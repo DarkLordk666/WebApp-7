@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ค้นหาสินค้าและบริการ</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Homepage.html">หน้าหลัก</a></li>
+                <li><a href="log-In.html">เข้าสู่ระบบ</a></li>
+                <li><a href="Register.html">ลงทะเบียน</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>ค้นหาสินค้าและบริการ</h1>
+
+        <!-- สร้างแบบฟอร์มสำหรับค้นหา -->
+        <form id="search-form">
+            <input type="text" id="search-keyword" placeholder="ค้นหาด้วยคำหลัก...">
+            <button type="Submit" id="search-button">ค้นหา</button>
+        </form>
+
+        <!-- แสดงผลลัพธ์ค้นหาที่จำลอง -->
+        <div id="search-results">
+            <!-- ในระยะแรกไม่มีการค้นหาจริง แต่แสดงผลลัพธ์จำลอง -->
+            <h2>ผลลัพธ์จำลอง</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ชื่อสินค้า/บริการ</th>
+                        <th>ประเภท</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- แสดงข้อมูลจำลองของผลลัพธ์ค้นหา -->
+                    <tr>
+                        <td><a href="Product-Detail1.html"> Grand Theft Auto V </a></td>
+                        <td> Open World </td>
+                        <td>4.5</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="Product-Detail2.html"> Counter-Strike: Global Offensive </a></td>
+                        <td> FPS </td>
+                        <td>3.8</td>
+                    </tr>
+
+                    <tr>
+                        <td><a href="Product-Detail3.html"> Generation Zero® </a></td>
+                        <td> OpenWorld </td>
+                        <td>3.6</td>
+                    </tr>
+                    <!-- เพิ่มข้อมูลจำลองตามความต้องการ -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // รับคุณลักษณะของแบบฟอร์มการค้นหา
+            const searchForm = document.getElementById("search-form");
+            const searchKeywordInput = document.getElementById("search-keyword");
+    
+            // รับส่วนที่จะแสดงผลลัพธ์ค้นหา
+            const searchResults = document.getElementById("search-results");
+    
+            // รับข้อมูลจำลองของผลลัพธ์ค้นหา (สำหรับตัวอย่าง)
+            const searchResultsData = [
+                { name: "Grand Theft Auto V", category: "Open World", rating: 4.5 },
+                { name: "Counter-Strike: Global Offensive", category: "FPS", rating: 3.8 },
+                { name: "Generation Zero®", category: "Open World", rating: 3.6 },
+                // เพิ่มข้อมูลจำลองตามความต้องการ
+            ];
+    
+            // ฟังก์ชันที่ใช้ในการค้นหาและแสดงผลลัพธ์
+            function performSearch() {
+                const keyword = searchKeywordInput.value.toLowerCase();
+    
+                // กรองผลลัพธ์ที่ตรงเงื่อนไข
+                const filteredResults = searchResultsData.filter(result =>
+                    result.name.toLowerCase().includes(keyword) ||
+                    result.category.toLowerCase().includes(keyword) ||
+                    result.rating.toString().includes(keyword)
+                );
+    
+                // แสดงผลลัพธ์ที่ตรงในตาราง
+                displaySearchResults(filteredResults);
+            }
+    
+            // ฟังก์ชันในการแสดงผลลัพธ์ค้นหาในตาราง
+            function displaySearchResults(results) {
+                const tableBody = searchResults.querySelector("tbody");
+                tableBody.innerHTML = ""; // ล้างข้อมูลเก่า
+    
+                if (results.length === 0) {
+                    // หากไม่พบผลลัพธ์
+                    tableBody.innerHTML = "<tr><td colspan='3'>ไม่พบผลลัพธ์</td></tr>";
+                } else {
+                    // แสดงผลลัพธ์ที่ตรง
+                    results.forEach(result => {
+                        const row = document.createElement("tr");
+                        row.innerHTML = `
+                            <td><a href="Product-Detail.html">${result.name}</a></td>
+                            <td>${result.category}</td>
+                            <td>${result.rating}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                }
+            }
+    
+            // เมื่อคลิกปุ่มค้นหา
+            searchForm.addEventListener("submit", function (e) {
+                e.preventDefault(); // หยุดการส่งค่าฟอร์ม
+                performSearch();
+            });
+        });
+    </script>
+    
+</body>
+</html>
