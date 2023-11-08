@@ -1,0 +1,17 @@
+{
+  "name": "game-shop-project",
+  "version": "1.0.0",
+  "description": "by yahnnakorn",
+  "main": "search.js",
+  "scripts": {
+    "start": "nodemon node.js"
+  },
+  "author": "6587012, yahnnakorn",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.3",
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Game Store</title>
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+    <nav>
+        <a href="Homepage.html"><h2>We Game Store</h2></a>
+        <a href="storage.html"><h2>Storage</h2></a>
+        <h5>Genre</h5><br>
+        <select id="game_genres">
+            <option value="All">All</option>
+            <option value="Open World">Open World</option>
+            <option value="FPS">FPS</option>
+            <option value="MMORPG">MMORPG</option>
+            <option value="RTS">RTS</option>
+            <option value="Action">Action</option>
+            <option value="Simulation">Simulation</option>
+            <option value="Visual Novel">Visual Novel</option>
+            <option value="Sandbox">Sandbox</option>
+            <option value="MOBA">MOBA</option>
+            <option value="Indie">Indie</option>
+        </select>
+       <article class="topnav">
+        <a href="Search.html"><h2>Search</h2></a>
+        <!-- HTML ของส่วนที่จะแสดงผลลัพธ์การค้นหา -->
+        <div id="search-results">
+    <!-- ผลลัพธ์การค้นหาจะปรากฏที่นี่ -->
+        </div>
+        <a href="Log-in.html"><h2>login</h2></a>
+        <a href="Register.html"><h2>register</h2></a>
+        <a href="About-us.html"><h2>About Us</h2></a>
+       </article>  
+    </nav>
+        <h1>ค้นหาข้อมูล</h1>
+        <form id="search-form">
+            <input type="text" list="game-list" id="search-input" placeholder="คำค้นหา">
+            <datalist id="game-list">
+                <option value="Minecraft">
+                <option value="CSGO">
+                <option value="Albion Online">
+                <option value="Red Alert 3">
+                <option value="Doom">
+                <option value="The Sim 4">
+                <option value="Doki Doki Literature Club">
+                <option value="No Man's Sky">
+                <option value="Dota 2">
+                <option value="Hollow Knight">
+                <!-- เพิ่มรายการเกมส์ตามที่คุณต้องการ -->
+            </datalist>
+            <button type="button" id="search-button">ค้นหา</button>
+        </form>
+
+        <ul class="search-results">
+            <!-- แสดงผลลัพธ์การค้นหาที่สร้างจำลอง -->
+        </ul>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchForm = document.getElementById("search-form");
+            const searchInput = document.getElementById("search-input");
+            const searchButton = document.getElementById("search-button");
+            const searchResults = document.querySelector(".search-results");
+            const gameList = document.getElementById("game-list").getElementsByTagName("option");
+
+            // เรียกใช้ฟังก์ชัน filterGames เมื่อหน้าค้นหาโหลดเสร็จ
+            filterGames("");
+
+            searchButton.addEventListener("click", function () {
+                filterGames(searchInput.value);
+            });
+
+            searchForm.addEventListener("submit", function (e) {
+                e.preventDefault(); // ป้องกันการส่งฟอร์ม
+                filterGames(searchInput.value);
+            });
+
+            function filterGames(keyword) {
+              searchResults.innerHTML = ''; // ล้างผลลัพธ์ค้นหาเดิม
+              keyword = keyword.trim().toLowerCase(); // ตัดช่องว่างหน้า-หลังและแปลงเป็นตัวพิมพ์เล็ก
+
+              for (const game of gameList) {
+                  const gameName = game.value.toLowerCase();
+
+                  if (keyword === '' || gameName.includes(keyword)) {
+                   const gameResult = document.createElement("li");
+                   const gameLink = document.createElement("a");
+                   gameLink.href = "/games/" + gameName + ".html"; // กำหนดลิงก์ตามชื่อเกม
+                   const imageBox = document.createElement("div");
+                   imageBox.classList.add("image-box");
+                   const gameImage = document.createElement("img");
+                //    gameImage.src = "/games/" + gameName + ".png"; // กำหนด URL รูปภาพตามชื่อเกม
+                //    gameImage.alt = " ";
+                //    gameImage.width = 0.5; // กำหนดความกว้างของรูป
+                //    gameImage.height = 0.5; // กำหนดความสูงของรูป
+                   const gameTitle = document.createElement("strong");
+                   gameTitle.textContent = game.value;
+
+                   imageBox.appendChild(gameImage);
+                   imageBox.appendChild(gameTitle);
+                   gameLink.appendChild(imageBox);
+                   gameResult.appendChild(gameLink);
+                   searchResults.appendChild(gameResult);
+                }
+              }
+            }
+          }
+        );
+    </script>
+</body>
+</html>
