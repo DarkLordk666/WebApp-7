@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Game Store</title>
+    <link rel="stylesheet" href="Adminpage.css">  
+</head>
+<body>
+    <nav>
+        <a href="Homepage.html"><h2>We Game Store</h2></a>
+        <a href="storage.html"><h2>Storage</h2></a>
+       <article class="topnav">
+        <a href="Search.html"><h2>Search</h2></a>
+        <!-- HTML ของส่วนที่จะแสดงผลลัพธ์การค้นหา -->
+        <div id="search-results">
+    <!-- ผลลัพธ์การค้นหาจะปรากฏที่นี่ -->
+        </div>
+        <a href="Log-in.html"><h2>login</h2></a>
+        <a href="Register.html"><h2>register</h2></a>
+        <a href="Adminpage.html"><h2>Admin</h2></a>
+        <a href="About-us.html"><h2>About Us</h2></a>
+       </article>  
+    </nav>
+        <h1>สำหรับแอดมิน</h1>
+    <article class="admin_container">   
+        <form action="admin_game.php" method="post">
+            <h2>เพิ่มเกมส์</h2>
+            <label for="name">ชื่อเกมส์:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="description">รายละเอียด:</label>
+            <textarea id="description" name="description" required></textarea>
+            <label for="image">URL รูปภาพ:</label>
+            <input type="text" id="image" name="image" required>
+            <button type="submit">เพิ่ม</button>
+        </form>
+    </article>
+
+    <article class="admin_container">   
+        <form action="admin_game.php" method="post">
+            <h2>ลบเกมส์</h2>
+            <label for="name">ชื่อเกมส์:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="description">รายละเอียด:</label>
+            <textarea id="description" name="description" required></textarea>
+            <label for="image">URL รูปภาพ:</label>
+            <input type="text" id="image" name="image" required>
+            <button type="submit">ลบ</button>
+        </form>
+    </article>
+
+    <article class="admin_container">   
+       <form action="admin_game.php" method="post">
+        <h2>ลบบัญชีผู้ใช้</h2>
+        <form id="user-account-form" action="process_user.php" method="post">
+            <label for="username">ชื่อผู้ใช้:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">รหัสผ่าน:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">ลบบัญชีผู้ใช้</button>
+        </form>
+    </article>  
+        </form>
+       <footer><h1>Web App Group 7</h1></footer>     
+    </section>
+</body>
+</html>
