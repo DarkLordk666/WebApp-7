@@ -74,13 +74,23 @@ Storytelling: Many players enjoy creating unique stories for their Sims. You can
 
 The Sims 4 is a versatile and open-ended game that offers endless possibilities for creativity and experimentation. Whether you want to create a thriving family, achieve professional success, build dream homes, or simply indulge in the quirkiness of Sims' lives, The Sims 4 provides a sandbox-like experience that caters to a wide range of player preferences and playstyles. Its combination of simulation, customization, and storytelling makes it a beloved and enduring title in the world of gaming.</h4>
         </section>
-        <section class="game-rating">
-            <h2>Rate this game:</h2>
-            <div class="thumbs-up" id="thumbs-up"></div>
-            <div class="thumbs-down" id="thumbs-down"></div>
-        </section>
+        <br>
+        <div class="wrapper">
+           <p class="text">What did you think <br>of this game?</p>
+           <div class="box">
+             <div class="icons">
+                <i class="fa-regular fa-thumbs-up" id="likeBtn" onclick="toggleLike()"></i>
+                <span class="like" id="likeCount">0</span>
+             </div> 
+             <div class="icons">
+                <i class="fa-regular fa-thumbs-down" id="dislikeBtn" onclick="toggleDislike()"></i>
+                <span class="dislike" id="dislikeCount">0</span>
+             </div>
+          </div>    
+        </div>
     </section>
     <script src="script.js"></script>
+    <script src="like&dislike.js"></script>
     <footer><h1>Web App Group 7</h1></footer>
 </body>
 </html>

@@ -70,13 +70,23 @@ Content Warnings: Due to the game's mature and potentially triggering themes, it
 
 "Doki Doki Literature Club!" is known for its ability to engage players emotionally and keep them on edge with its unexpected twists. Its innovative use of the visual novel format and willingness to tackle dark and complex themes make it a standout in the genre. As a result, it has garnered a passionate fanbase and continues to be discussed and analyzed by gamers and critics alike for its narrative and gameplay innovations.</h4>
         </section>
-        <section class="game-rating">
-            <h2>Rate this game:</h2>
-            <div class="thumbs-up" id="thumbs-up"></div>
-            <div class="thumbs-down" id="thumbs-down"></div>
-        </section>
+        <br>
+        <div class="wrapper">
+           <p class="text">What did you think <br>of this game?</p>
+           <div class="box">
+             <div class="icons">
+                <i class="fa-regular fa-thumbs-up" id="likeBtn" onclick="toggleLike()"></i>
+                <span class="like" id="likeCount">0</span>
+             </div> 
+             <div class="icons">
+                <i class="fa-regular fa-thumbs-down" id="dislikeBtn" onclick="toggleDislike()"></i>
+                <span class="dislike" id="dislikeCount">0</span>
+             </div>
+          </div>    
+        </div>
     </section>
     <script src="script.js"></script>
+    <script src="like&dislike.js"></script>
     <footer><h1>Web App Group 7</h1></footer>
 </body>
 </html>

@@ -75,13 +75,23 @@
                 
                 "Hollow Knight" has garnered praise for its challenging gameplay, deep lore, and the sense of accomplishment that comes from mastering its mechanics. Its richly detailed world and intricate level design have captivated players and critics alike, making it a standout title in the Metroidvania genre. The game's success has led to a dedicated fan base and the anticipation of a sequel, "Hollow Knight: Silksong," which continues the journey in this fascinating underground world.</h4>
         </section>
-        <section class="game-rating">
-            <h2>Rate this game:</h2>
-            <div class="thumbs-up" id="thumbs-up"></div>
-            <div class="thumbs-down" id="thumbs-down"></div>
-        </section>
+        <br>
+        <div class="wrapper">
+           <p class="text">What did you think <br>of this game?</p>
+           <div class="box">
+             <div class="icons">
+                <i class="fa-regular fa-thumbs-up" id="likeBtn" onclick="toggleLike()"></i>
+                <span class="like" id="likeCount">0</span>
+             </div> 
+             <div class="icons">
+                <i class="fa-regular fa-thumbs-down" id="dislikeBtn" onclick="toggleDislike()"></i>
+                <span class="dislike" id="dislikeCount">0</span>
+             </div>
+          </div>    
+        </div>
     </section>
     <script src="script.js"></script>
+    <script src="like&dislike.js"></script>
     <footer><h1>Web App Group 7</h1></footer>
 </body>
 </html>

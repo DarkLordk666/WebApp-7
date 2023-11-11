@@ -66,19 +66,23 @@
                 Educational Benefits:
                 Minecraft has found its way into education, with "Minecraft: Education Edition" tailored for classroom use. It is used as a teaching tool for subjects like mathematics, history, and programming, fostering critical thinking and problem-solving skills in students through a fun and interactive environment.</h4>
         </section>
+        <br>
+        <div class="wrapper">
+           <p class="text">What did you think <br>of this game?</p>
+           <div class="box">
+             <div class="icons">
+                <i class="fa-regular fa-thumbs-up" id="likeBtn" onclick="toggleLike()"></i>
+                <span class="like" id="likeCount">0</span>
+             </div> 
+             <div class="icons">
+                <i class="fa-regular fa-thumbs-down" id="dislikeBtn" onclick="toggleDislike()"></i>
+                <span class="dislike" id="dislikeCount">0</span>
+             </div>
+          </div>    
+        </div>
     </section>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const isSearched = window.location.search.includes("q=minecraft"); // เช็คว่าโหลดเพจมาจากการค้นหา "minecraft" หรือไม่
-
-    if (isSearched) {
-        // แสดงข้อมูลเกม Minecraft
-        const gameDetails = document.querySelector(".game-details");
-        gameDetails.style.display = "block"; // แสดงข้อมูล
-    }
-   });
-    </script>
     <script src="script.js"></script>
+    <script src="like&dislike.js"></script>
     <footer><h1>Web App Group 7</h1></footer>
 </body>
 </html>
