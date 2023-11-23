@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+.aboutus {
+    font-family: 'Kanit', sans-serif;
+    color: white !important;
+    display: flex;
+    justify-content: center; 
+} 
+.aboutus h1 {
+    color:  aqua;
+    justify-content: center;
+    display: flex;
+} 
