@@ -1,0 +1,166 @@
+/* เลือกคลาส image-box ซึ่งใช้ในรายการเกมส์ */
+.image-box {
+    width: 100px; /* ปรับขนาดความกว้างของกล่องรูปภาพตามที่คุณต้องการ */
+    height: auto; /* ทำให้ความสูงปรับแต่งอัตโนมัติตามอัตราส่วนของรูปภาพ */
+    display: inline-block; /* จัดเรียงรูปภาพในแนวนอน */
+    margin-right: 10px; /* ระยะห่างระหว่างรูปภาพแต่ละรายการ */
+}
+
+.image-box img {
+    width: 100%; /* กำหนดให้รูปภาพขนาดเต็มกับกล่อง */
+    height: 100%; /* กำหนดให้รูปภาพขนาดเต็มกับกล่อง */
+    object-fit: cover; /* กำหนดให้รูปภาพครอบคลุมพื้นที่ในกล่อง */
+}
+
+
+
+
+/* style.css */
+
+/* Reset CSS */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and font family */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header and navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the main section */
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+section h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+section h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Style the game list */
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.image-box {
+    text-align: center;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-box strong {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+/* Add additional styles as needed */
+
+/* พื้นหลัง Navigation Bar */
+header {
+    background-image: url('download.jpg'); /* แทน 'your-background-image.jpg' ด้วย URL ของภาพพื้นหลังที่คุณต้องการใช้ */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* พื้นหลัง */
+
+/* ใส่พื้นหลังเป็นภาพในหน้าเว็บทั้งหน้า */
+body {
+    background-image: url('3430.webp'); /* แทน 'your-background-image.jpg' ด้วย URL ของภาพพื้นหลังที่คุณต้องการใช้ */
+    background-size: cover;
+    background-attachment: fixed; /* คือการให้พื้นหลังภาพติดตามการเลื่อนหน้าเว็บ */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+/* จัดให้รูปอยู่ตรงกลางของสมาชิก */
+.member {
+    text-align: center;
+}
+
+.member .image-box {
+    display: inline-block;
+}
+
+
+
+
+
+/* ให้รูปภาพในสมาชิกมีขนาดเท่ากัน */
+.member .image-box img {
+    width: 150px; /* ปรับขนาดรูปภาพตามที่คุณต้องการ */
+    height: 150px; /* ปรับขนาดรูปภาพตามที่คุณต้องการ */
+    object-fit: cover; /* ครอบคลุมพื้นที่ในกล่อง */
+    border-radius: 50%; /* ทำให้รูปมีรูปร่างวงกลม */
+}
